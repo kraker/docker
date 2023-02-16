@@ -5,10 +5,12 @@ ENV container=docker
 # Install requirements
 RUN zypper refresh && zypper update -y
 RUN zypper install -y \
-sudo \
 which \
+sudo \
+openssh \
 python3 \
 python3-pip
+
 
 # openSUSE systemd base image
 # See: https://github.com/robertdebock/docker-opensuse-systemd
